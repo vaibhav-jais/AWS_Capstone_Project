@@ -1,8 +1,9 @@
+/*
 variable "bucket_name" {
   type        = string
   description = "Remote state bucket name"
 }
-
+*/
 variable "aws_region" {
   type        = string
   description = "AWS region to deploy resources"
