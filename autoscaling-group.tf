@@ -27,7 +27,7 @@ resource "aws_autoscaling_group" "wordpress" {
     id      = aws_launch_template.wordpress.id
     version = "$Latest"
   }
-  depends_on = [aws_internet_gateway.gw]
+  depends_on = [aws_security_group.ec2, aws_security_group.alb, aws_security_group.rds]
 
 }
 
