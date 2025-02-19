@@ -18,18 +18,12 @@ resource "aws_security_group" "alb" {
     cidr_blocks = ["0.0.0.0/0"] # Allow HTTPS from anywhere
   }
 
+  # Allow all outbound traffic
   egress {
-    from_port       = 80
-    to_port         = 80
-    protocol        = "tcp"                       # tcp protocol
-    security_groups = [aws_security_group.ec2.id] # Outbound to EC2 SG on port 80
-  }
-
-  egress {
-    from_port       = 443
-    to_port         = 443
-    protocol        = "tcp"
-    security_groups = [aws_security_group.ec2.id] # Outbound to EC2 SG on port 443
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"          # All protocols
+    cidr_blocks = ["0.0.0.0/0"] # Allow all outbound traffic
   }
 
   tags = {
