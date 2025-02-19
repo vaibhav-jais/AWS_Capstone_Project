@@ -1,10 +1,10 @@
 # Launch Template
 resource "aws_launch_template" "wordpress" {
-  name_prefix          = "LT_using_AMI_WordPress_Server-"
-  image_id             = var.ec2_ami_id
-  instance_type        = var.instance_type
-  key_name             = "Capstone_Proj_KeyPair.pem"
-  security_group_names = [aws_security_group.ec2.name]
+  name_prefix            = "LT_using_AMI_WordPress_Server-"
+  image_id               = var.ec2_ami_id
+  instance_type          = var.instance_type
+  key_name               = "Capstone_Proj_KeyPair.pem"
+  vpc_security_group_ids = [aws_security_group.ec2.id]
 
   tag_specifications {
     resource_type = "instance"
@@ -27,8 +27,4 @@ resource "aws_autoscaling_group" "wordpress" {
     id      = aws_launch_template.wordpress.id
     version = "$Latest"
   }
-  depends_on = [aws_security_group.ec2, aws_security_group.alb, aws_security_group.rds]
-
 }
-
-
