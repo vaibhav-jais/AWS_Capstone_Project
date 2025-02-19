@@ -3,7 +3,7 @@ resource "aws_launch_template" "wordpress" {
   name_prefix            = "LT_using_AMI_WordPress_Server-"
   image_id               = var.ec2_ami_id
   instance_type          = var.instance_type
-  key_name               = "Capstone_Proj_KeyPair.pem"
+  key_name               = "new_LMSserver_keypair"
   vpc_security_group_ids = [aws_security_group.ec2.id]
 
   tag_specifications {
