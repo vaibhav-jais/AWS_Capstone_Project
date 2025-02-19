@@ -18,7 +18,7 @@ resource "aws_lb_target_group" "main" {
 
 # Create Application Load Balancer
 resource "aws_lb" "main" {
-  name               = "Wordpress_server-alb"
+  name               = "Wordpress-server-alb"
   internal           = false # Public-facing ALB
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
@@ -27,7 +27,7 @@ resource "aws_lb" "main" {
   enable_deletion_protection = false
 
   tags = {
-    Name = "Wordpress_server-alb"
+    Name = "Wordpress-server-alb"
   }
 }
 
