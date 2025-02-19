@@ -4,7 +4,6 @@ resource "aws_launch_template" "wordpress" {
   image_id             = var.ec2_ami_id
   instance_type        = var.instance_type
   key_name             = "Capstone_Proj_KeyPair.pem"
-  vpc_id               = data.aws_vpc.selected.id
   security_group_names = [aws_security_group.ec2.name]
 
   tag_specifications {
