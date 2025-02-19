@@ -1,6 +1,6 @@
 # Create Target Group
 resource "aws_lb_target_group" "main" {
-  name     = "Wordpress_server-tg"
+  name     = "Wordpress-server-tg"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.main.id
@@ -12,7 +12,7 @@ resource "aws_lb_target_group" "main" {
   }
 
   tags = {
-    Name = "Wordpress_server-tg"
+    Name = "Wordpress-server-tg"
   }
 }
 
