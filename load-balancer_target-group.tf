@@ -3,7 +3,7 @@ resource "aws_lb_target_group" "main" {
   name     = "Wordpress_server-tg"
   port     = 80
   protocol = "HTTP"
-  vpc_id   = data.aws_vpc.selected.id
+  vpc_id   = aws_vpc.main.id
 
   health_check {
     path     = "/wp-login.php" #  WordPress health-check path
@@ -40,12 +40,5 @@ resource "aws_lb_listener" "http" {
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.main.arn
-  }
-}
-
-# Data source to get the VPC ID
-data "aws_vpc" "selected" {
-  tags = {
-    Name = var.vpc_name
   }
 }
