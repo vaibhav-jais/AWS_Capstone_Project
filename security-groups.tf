@@ -74,10 +74,10 @@ resource "aws_security_group" "ec2" {
   }
 
   egress {
-    from_port       = 3306
-    to_port         = 3306
-    protocol        = "tcp" # tcp protocol
-    security_groups = [aws_security_group.rds.id]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"          # All protocols
+    cidr_blocks = ["0.0.0.0/0"] # Allow all outbound traffic
   }
 
   tags = {
