@@ -28,10 +28,8 @@ resource "aws_autoscaling_group" "wordpress" {
     id      = aws_launch_template.wordpress.id
     version = "$Latest"
   }
+  depends_on = [aws_internet_gateway.gw]
+
 }
 
-data "aws_vpc" "selected" {
-  tags = {
-    Name = var.vpc_name
-  }
-}
+
