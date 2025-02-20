@@ -1,3 +1,9 @@
+# IAM Instance Profile
+resource "aws_iam_instance_profile" "ec2_s3_log_write" {
+  name = "EC2-S3-Log-Write-Instance-Profile"
+  role = aws_iam_role.ec2_s3_log_write.name
+}
+
 # Launch Template
 resource "aws_launch_template" "wordpress" {
   name_prefix            = "LT_using_AMI_WordPress_Server-"
