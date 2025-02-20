@@ -65,3 +65,15 @@ variable "db_instance_class" {
   description = "RDS instance class"
   default     = "db.t3.micro"
 }
+
+variable "db_username" {
+  type        = string
+  description = "The username for the MariaDB database"
+  sensitive   = true
+}
+
+variable "db_password" {
+  type        = string
+  description = "The password for the MariaDB database"
+  sensitive   = true
+}
