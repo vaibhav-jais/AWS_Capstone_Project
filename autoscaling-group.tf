@@ -6,6 +6,10 @@ resource "aws_launch_template" "wordpress" {
   key_name               = "new_LMSserver_keypair"
   vpc_security_group_ids = [aws_security_group.ec2.id]
 
+  iam_instance_profile {
+    arn = aws_iam_role.ec2_s3_log_write.arn
+  }
+
   tag_specifications {
     resource_type = "instance"
 
@@ -13,6 +17,8 @@ resource "aws_launch_template" "wordpress" {
       Name = "WordPress Server"
     }
   }
+  user_data = base64encode(file("user_data.sh"))
+
 }
 
 # Auto Scaling Group
