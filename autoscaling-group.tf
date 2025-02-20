@@ -14,7 +14,7 @@ resource "aws_launch_template" "wordpress" {
       Name = "WordPress Server"
     }
   }
-  user_data = base64encode(file("user_data.sh"))
+  user_data = base64encode(file("user-data.sh"))
 
 }
 
