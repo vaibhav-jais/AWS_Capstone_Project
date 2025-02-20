@@ -17,7 +17,7 @@ resource "aws_db_instance" "wordpress" {
   password               = var.db_password
   db_subnet_group_name   = aws_db_subnet_group.private_rds.name
   vpc_security_group_ids = [aws_security_group.rds.id]
-  multi_az               = true                 # Enabling Multi-AZ
-  availability_zone      = "${var.aws_region}a" # Primary AZ
-  skip_final_snapshot    = true                 # Disabling final snapshot
+  multi_az               = true # Enabling Multi-AZ
+  #availability_zone      = "${var.aws_region}a" # Primary AZ
+  skip_final_snapshot = true # Disabling final snapshot
 }
