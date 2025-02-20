@@ -6,7 +6,7 @@ resource "aws_db_subnet_group" "private_rds" {
 
 # RDS Instance (MariaDB)
 resource "aws_db_instance" "wordpress" {
-  identifier             = "Wordpress-server-Database"
+  identifier             = "wordpress-server-database"
   allocated_storage      = 20 # Minimum value for db.t3.micro
   storage_type           = "gp2"
   engine                 = "mariadb"
