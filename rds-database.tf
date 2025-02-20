@@ -13,7 +13,6 @@ resource "aws_db_instance" "wordpress" {
   engine_version         = "10.6"
   instance_class         = var.db_instance_class
   port                   = 3306
-  db_name                = "wordpress" # Database name
   username               = var.db_username
   password               = var.db_password
   db_subnet_group_name   = aws_db_subnet_group.private_rds.name
