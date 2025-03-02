@@ -37,3 +37,15 @@ The architecture utilizes the following key AWS resources:
 - **Target Group:** Defines the group of EC2 instances that the ALB routes traffic to.
 - **RDS MariaDB:** Provides a managed database service for storing LMS data.
 - **Security Groups:** Control network access to EC2 instances and the RDS database.
+
+## **🔗 Useful Links**
+- [Terraform Documentation](https://developer.hashicorp.com/terraform/tutorials/aws)
+- [Project Presentation Slides](https://app.presentations.ai/view/Tt59mt)
+
+## **💡 Future Enhancements**
+This project can be further enhanced by focusing on the following areas:
+
+- **Containerization:** Migrate the WordPress application to AWS container management services (ECS/EKS) for improved orchestration, scalability, and resource utilization.
+- **Serverless Functions:** Explore opportunities to leverage AWS Lambda for suitable components to reduce operational overhead and costs.
+- **Enhanced Security:** Implement HTTPS using AWS Certificate Manager for secure communication and data protection.
+- **Advanced Optimization:** Investigate additional AWS services to further enhance security, optimize WordPress performance, improve availability and scalability, and streamline monitoring and troubleshooting.
