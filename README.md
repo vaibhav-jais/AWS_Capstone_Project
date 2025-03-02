@@ -8,6 +8,17 @@ A glimpse of the deployed LMS webpage can be seen in the images below, showcasin
 ![LMS Homepage](documentation/LMS_Homepage.PNG)
 ![Course Catalog](documentation/course_catalog.PNG)
 
+## **🎯 Project Objectives**
+This project aimed to create a robust and cost-effective infrastructure for a WordPress-based Learning Management System (LMS) on AWS. The primary goals were to achieve high availability, scalability, security, and automation using Terraform, while minimizing costs through the utilization of AWS Free Tier resources where possible.
+
+To achieve these objectives, the project focused on:
+
+- Deploying a Highly Available WordPress LMS on AWS: Ensuring continuous availability, even during infrastructure failures.
+- Achieving Scalability and Elasticity: Designing the solution to automatically adjust resources based on traffic.
+- Enhancing Security Posture: Protecting the LMS and data from unauthorized access and cyber threats.
+- Automating Infrastructure Provisioning with Terraform: Using infrastructure-as-code for consistency and reproducibility.
+- Minimizing Costs by Leveraging AWS Free Tier: Utilizing free tier resources where feasible and monitoring costs.
+
 ## **🏗️ System Infrastructure/Topology Diagram**
 
 The architecture diagram illustrates the AWS resources employed to host the WordPress-based LMS.
