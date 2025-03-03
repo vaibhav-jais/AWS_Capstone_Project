@@ -49,3 +49,6 @@ This project can be further enhanced by focusing on the following areas:
 - **Serverless Functions:** Explore opportunities to leverage AWS Lambda for suitable components to reduce operational overhead and costs.
 - **Enhanced Security:** Implement HTTPS using AWS Certificate Manager for secure communication and data protection.
 - **Advanced Optimization:** Investigate additional AWS services to further enhance security, optimize WordPress performance, improve availability and scalability, and streamline monitoring and troubleshooting.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
